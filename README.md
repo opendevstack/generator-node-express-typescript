@@ -1,8 +1,8 @@
 # TypeScript NodeJS Generator
-[![Build Status](https://secure.travis-ci.org/ospatil/generator-node-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-typescript)
-[![npm version](https://badge.fury.io/js/generator-node-typescript.svg)](http://badge.fury.io/js/generator-node-typescript)
+[![Build Status](https://secure.travis-ci.org/ospatil/generator-node-express-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-express-typescript)
+[![npm version](https://badge.fury.io/js/generator-node-express-typescript.svg)](http://badge.fury.io/js/generator-node-express-typescript)
 
-This is a fork of [this generator](https://github.com/ospatil/generator-node-typescript) but I added express to it. 
+This is a fork of [this generator](https://github.com/ospatil/generator-node-express-typescript) but I added express to it. 
 
 I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS express servers using TypeScript. I let you quickly setup a project with latest available tools and best practices.
 
@@ -20,10 +20,10 @@ You want to know if you can change any of these? Of course, why not? It is your 
 
 ## Usage
 
-Install `generator-node-typescript` globally. If you are planning to use _gulp_, install `gulp-cli` globally.
+Install `generator-node-express-typescript` globally. If you are planning to use _gulp_, install `gulp-cli` globally.
 
 ```sh
-$npm install -g generator-node-typescript
+$npm install -g generator-node-express-typescript
 ```
 
 Create a new directory and `cd` into it.
