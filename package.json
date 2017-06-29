@@ -6,15 +6,15 @@
   "main": "app/index.js",
   "repository": "opitzconsulting/generator-node-express-typescript",
   "author": {
-    "name": "Omkar Patil",
-    "email": "ospatil@gmail.com",
-    "url": "https://github.com/ospatil"
+    "name": "Pascal Brokmeier",
+    "email": "pascal.brokmeier@gmail.com",
+    "url": "https://github.com/pascalwhoop"
   },
   "contributors": [
-      {
-          "name": "Pascal Brokmeier",
-          "email": "pascal.brokmeier@gmail.com",
-          "url": "https://github.com/pascalwhoop"
+    {
+      "name": "Omkar Patil",
+      "email": "ospatil@gmail.com",
+      "url": "https://github.com/ospatil"
     }
   ],
   "scripts": {

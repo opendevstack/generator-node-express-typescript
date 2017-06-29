@@ -2,7 +2,7 @@
 [![Build Status](https://secure.travis-ci.org/ospatil/generator-node-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-typescript)
 [![npm version](https://badge.fury.io/js/generator-node-typescript.svg)](http://badge.fury.io/js/generator-node-typescript)
 
-> For my 1.x release documentation for TypeScript 1.8, refer to [readme file for 1.x release](./README-1x.md).
+This is a fork of [this generator](https://github.com/ospatil/generator-node-typescript) but I added express to it. 
 
 I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS express servers using TypeScript. I let you quickly setup a project with latest available tools and best practices.
 
@@ -12,6 +12,9 @@ I use:
 - _tslint_ - as linter for TypeScript source files.
 - _mocha_ - as testing framework to write specs in **TypeScript** itself.
 - _istanbul_ - a JavaScript code coverage tool working on TypeScript files.
+
+**I don't use: a UI renderer or anything visual**
+I am a pure API targeted generator. So with me, you should build REST API's. 
 
 You want to know if you can change any of these? Of course, why not? It is your module after all. I simply get down to business of generating, no questions asked. Once done, I get out of the way and you can do as you please!
 
