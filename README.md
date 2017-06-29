@@ -4,7 +4,7 @@
 
 > For my 1.x release documentation for TypeScript 1.8, refer to [readme file for 1.x release](./README-1x.md).
 
-I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS modules using TypeScript. I let you quickly setup a project with latest available tools and best practices.
+I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS express servers using TypeScript. I let you quickly setup a project with latest available tools and best practices.
 
 I use:
 
