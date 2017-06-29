@@ -4,7 +4,7 @@
   "description": "A minimal Yeoman Generator for creating NodeJS modules using TypeScript and including a minimal express server.",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "ospatil/generator-node-typescript",
+  "repository": "opitzconsulting/generator-node-express-typescript",
   "author": {
     "name": "Omkar Patil",
     "email": "ospatil@gmail.com",
