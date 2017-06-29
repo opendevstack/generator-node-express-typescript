@@ -36,10 +36,10 @@ $mkdir my-new-project && cd $_
 Run the generator.
 
 ```sh
-$yo node-typescript
+$yo node-express-typescript
 ```
 
-You can choose to use _gulp_ as your build system using command - `$yo node-typescript --gulp`
+You can choose to use _gulp_ as your build system using command - `$yo node-express-typescript --gulp`
 
 Run `npm run` for information on available tasks.
 
