@@ -1,6 +1,6 @@
 {
   "name": "generator-node-express-typescript",
-  "version": "2.3.1",
+  "version": "0.5.0",
   "description": "A minimal Yeoman Generator for creating NodeJS modules using TypeScript and including a minimal express server.",
   "license": "MIT",
   "main": "app/index.js",
