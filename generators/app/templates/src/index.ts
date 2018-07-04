@@ -12,7 +12,7 @@ app.use("/api/weather", weatherRouter);
 
 // initialize the webserver
 const host = process.env.YOUR_HOST || "0.0.0.0";
-const port = process.env.PORT || 8080;
+const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, host, () => {
     console.info(`App listening on port ${port}!`);
 });
