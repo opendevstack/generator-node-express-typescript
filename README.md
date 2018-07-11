@@ -1,6 +1,6 @@
 # TypeScript NodeJS Generator
 [![Build Status](https://secure.travis-ci.org/ospatil/generator-node-express-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-express-typescript)
-[![npm version](https://badge.fury.io/js/generator-node-express-typescript.svg)](http://badge.fury.io/js/generator-node-express-typescript)
+[![npm version](https://badge.fury.io/js/%40opendevstack%2Fgenerator-node-express-typescript.svg)](https://badge.fury.io/js/%40opendevstack%2Fgenerator-node-express-typescript)
 
 This is a fork of [this generator](https://github.com/ospatil/generator-node-express-typescript) but I added express to it. 
 
@@ -23,7 +23,7 @@ You want to know if you can change any of these? Of course, why not? It is your 
 Install `generator-node-express-typescript` globally. If you are planning to use _gulp_, install `gulp-cli` globally.
 
 ```sh
-$npm install -g generator-node-express-typescript
+$npm install -g @opendevstack/generator-node-express-typescript
 ```
 
 Create a new directory and `cd` into it.
@@ -36,10 +36,10 @@ $mkdir my-new-project && cd $_
 Run the generator.
 
 ```sh
-$yo node-express-typescript
+$yo @opendevstack/node-express-typescript
 ```
 
-You can choose to use _gulp_ as your build system using command - `$yo node-express-typescript --gulp`
+You can choose to use _gulp_ as your build system using command - `$yo @opendevstack/node-express-typescript --gulp`
 
 Run `npm run` for information on available tasks.
 
