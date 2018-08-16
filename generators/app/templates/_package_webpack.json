@@ -1,0 +1,70 @@
+{
+  "name": "<%= appname %>",
+  "version": "0.0.0",
+  "description": "<%= appname %>",
+  "license": "MIT",
+  "repository": "",
+  "author": "",
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "build": "npm run clean && npm run lint && webpack --config webpack.config.js",
+    "build:no-webpack": "npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
+    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
+    "serve": "npm run build && node lib/index.js",
+    "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
+    "watch": "npm run build -- --watch",
+    "watch:test": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.3",
+    "@types/chai": "^3.0.0",
+    "@types/express": "^4.0.35",
+    "@types/lodash": "^4.14.65",
+    "@types/mocha": "^2.0.0",
+    "@types/node": "^7.0.0",
+    "@types/webpack": "^4.4.9",
+    "chai": "^3.0.0",
+    "coveralls": "^2.0.0",
+    "mocha": "^3.0.0",
+    "nyc": "^10.0.0",
+    "rimraf": "^2.0.0",
+    "ts-loader": "^3.5.0",
+    "ts-node": "^3.0.0",
+    "tslint": "^5.0.0",
+    "typescript": "^2.0.0",
+    "webpack": "^3.10.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "lib"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [],
+    "all": true
+  }
+}

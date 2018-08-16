@@ -2,7 +2,7 @@
 [![Build Status](https://secure.travis-ci.org/ospatil/generator-node-express-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-express-typescript)
 [![npm version](https://badge.fury.io/js/generator-node-express-typescript.svg)](http://badge.fury.io/js/generator-node-express-typescript)
 
-This is a fork of [this generator](https://github.com/ospatil/generator-node-express-typescript) but I added express to it. 
+This is a fork of [this generator](https://github.com/ospatil/generator-node-express-typescript) but I added express and webpack to it. 
 
 I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS express servers using TypeScript. I let you quickly setup a project with latest available tools and best practices.
 
@@ -38,6 +38,13 @@ Run the generator.
 ```sh
 $yo node-express-typescript
 ```
+
+Webpack is enabled by default as build system. To disable webpack use
+
+```sh
+$yo node-express-typescript --no-webpack
+```
+
 
 You can choose to use _gulp_ as your build system using command - `$yo node-express-typescript --gulp`
 
@@ -85,6 +92,7 @@ Available tasks
 
 ## Highlights of the latest release
 
+- I use webpack for the build process
 - I use latest version of **TypeScript**.
 - I use _npm_ to fetch type definitions making life so much easier. You can find more information on [https://blogs.msdn.microsoft.com/typescript/2016/06/15/the-future-of-declaration-files/](https://blogs.msdn.microsoft.com/typescript/2016/06/15/the-future-of-declaration-files/).
 - I use _mocha_ as testing framework as it allows easier test runs from command line. Also, one of the most important things regarding testing is **now you can write tests in TypeScript itself**. The out-of-box configuration includes use of [ts-node](https://github.com/TypeStrong/ts-node) as mocha compiler allowing executing specs written in TypeScript without compiling them first.

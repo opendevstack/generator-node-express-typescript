@@ -15,11 +15,11 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     this.log(
-      chalk.cyan('I simply get down to business of generating, no questions asked!')
-      + '\n'
-      + chalk.yellow('Libraries you ask? I use npm (or optionally gulp) as task runner and mocha for testing.')
-      + '\n'
-      + chalk.gray('Can you change these? Of course, it\'s your code. I get out of the way after scaffolding.')
+      chalk.cyan('I simply get down to business of generating, no questions asked!') +
+      '\n' +
+      chalk.yellow('Libraries you ask? I use npm (or optionally gulp) as task runner and mocha for testing.') +
+      '\n' +
+      chalk.gray('Can you change these? Of course, it\'s your code. I get out of the way after scaffolding.')
     );
 
     done();
@@ -34,17 +34,21 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('test/greeter-spec.ts'),
         this.destinationPath('test/greeter-spec.ts'),
-        { isWindows: process.platform === 'win32' }
+        {isWindows: process.platform === 'win32'}
       );
       this.fs.copyTpl(
         this.templatePath('test/index-spec.ts'),
         this.destinationPath('test/index-spec.ts'),
-        { isWindows: process.platform === 'win32' }
+        {isWindows: process.platform === 'win32'}
       );
     },
 
     projectfiles: function () {
       var today = new Date();
+
+      // --no-webpack webpack is passed as false boolean parameter, if left out, there is no webpack parameter
+      const webpack = this.options.webpack === undefined || this.options.webpack;
+
 
       if (this.options.gulp) {
         this.fs.copy(
@@ -55,13 +59,13 @@ module.exports = yeoman.generators.Base.extend({
         this.fs.copyTpl(
           this.templatePath('_package_gulp.json'),
           this.destinationPath('package.json'),
-          { appname: _.kebabCase(path.basename(process.cwd())) }
+          {appname: _.kebabCase(path.basename(process.cwd()))}
         );
 
         this.fs.copy(
           this.templatePath('_gulpfile.js'),
           this.destinationPath('gulpfile.js'),
-          { appname: _.kebabCase(path.basename(process.cwd())) }
+          {appname: _.kebabCase(path.basename(process.cwd()))}
         );
 
         this.fs.copy(
@@ -74,11 +78,25 @@ module.exports = yeoman.generators.Base.extend({
           this.destinationPath('.vscode/tasks.json')
         );
 
-        this.fs.copyTpl(
-          this.templatePath('_package.json'),
-          this.destinationPath('package.json'),
-          { appname: _.kebabCase(path.basename(process.cwd())) }
-        );
+        if (webpack) {
+          this.fs.copyTpl(
+            this.templatePath('_package_webpack.json'),
+            this.destinationPath('package.json'),
+            {appname: _.kebabCase(path.basename(process.cwd()))}
+          );
+
+          this.fs.copy(
+            this.templatePath('_webpack.config.js'),
+            this.destinationPath('webpack.config.js')
+          );
+
+        } else {
+          this.fs.copyTpl(
+            this.templatePath('_package.json'),
+            this.destinationPath('package.json'),
+            {appname: _.kebabCase(path.basename(process.cwd()))}
+          );
+        }
 
         this.fs.copy(
           this.templatePath('travis.yml'),
@@ -95,10 +113,19 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_vscode/settings.json'),
         this.destinationPath('.vscode/settings.json')
       );
-      this.fs.copy(
-        this.templatePath('_tsconfig.json'),
-        this.destinationPath('tsconfig.json')
-      );
+
+      if (webpack && !this.options.gulp) {
+        this.fs.copy(
+          this.templatePath('_tsconfig_webpack.json'),
+          this.destinationPath('tsconfig.json')
+        );
+      } else {
+        this.fs.copy(
+          this.templatePath('_tsconfig.json'),
+          this.destinationPath('tsconfig.json')
+        );
+      }
+
       this.fs.copy(
         this.templatePath('_tslint.json'),
         this.destinationPath('tslint.json')
@@ -114,7 +141,7 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('LICENSE'),
         this.destinationPath('LICENSE'),
-        { year: today.getFullYear().toPrecision(4) }
+        {year: today.getFullYear().toPrecision(4)}
       );
     }
   },
@@ -122,7 +149,7 @@ module.exports = yeoman.generators.Base.extend({
   install: {
     npmInstall: function () {
       var generator = this;
-      generator.npmInstall(null, { skipInstall: this.options['skip-install'] }, function () {
+      generator.npmInstall(null, {skipInstall: this.options['skip-install']}, function () {
         //generator.spawnCommandSync('typings', ['init']); //typings init
         //generator.spawnCommandSync('typings', ['install', 'dt~node', '--save', '--global']) //typings install --save dt~node --global
       });
