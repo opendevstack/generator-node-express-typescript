@@ -39,6 +39,12 @@ Run the generator.
 $yo @opendevstack/node-express-typescript
 ```
 
+Webpack is enabled by default as build system. To disable webpack use
+
+```sh
+$yo node-express-typescript --no-webpack
+```
+
 You can choose to use _gulp_ as your build system using command - `$yo @opendevstack/node-express-typescript --gulp`
 
 Run `npm run` for information on available tasks.
@@ -85,6 +91,7 @@ Available tasks
 
 ## Highlights of the latest release
 
+- I use webpack for the build process
 - I use latest version of **TypeScript**.
 - I use _npm_ to fetch type definitions making life so much easier. You can find more information on [https://blogs.msdn.microsoft.com/typescript/2016/06/15/the-future-of-declaration-files/](https://blogs.msdn.microsoft.com/typescript/2016/06/15/the-future-of-declaration-files/).
 - I use _mocha_ as testing framework as it allows easier test runs from command line. Also, one of the most important things regarding testing is **now you can write tests in TypeScript itself**. The out-of-box configuration includes use of [ts-node](https://github.com/TypeStrong/ts-node) as mocha compiler allowing executing specs written in TypeScript without compiling them first.
