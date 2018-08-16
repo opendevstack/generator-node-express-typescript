@@ -2,7 +2,7 @@
 [![Build Status](https://secure.travis-ci.org/ospatil/generator-node-express-typescript.png?branch=master)](https://travis-ci.org/ospatil/generator-node-express-typescript)
 [![npm version](https://badge.fury.io/js/generator-node-express-typescript.svg)](http://badge.fury.io/js/generator-node-express-typescript)
 
-This is a fork of [this generator](https://github.com/ospatil/generator-node-express-typescript) but I added express to it. 
+This is a fork of [this generator](https://github.com/ospatil/generator-node-typescript) but with express added to it. 
 
 I'm a minimal [Yeoman](http://yeoman.io) generator for creating NodeJS express servers using TypeScript. I let you quickly setup a project with latest available tools and best practices.
 
