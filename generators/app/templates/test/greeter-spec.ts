@@ -1,7 +1,4 @@
-<% if (isWindows) { %>
-/// <reference path="../node_modules/@types/mocha/index.d.ts" />
-<% } %>
-import { Greeter } from "../src/greeter";
+import {Greeter} from "../src/greeter";
 import * as chai from "chai";
 
 const expect = chai.expect;

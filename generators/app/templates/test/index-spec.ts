@@ -1,8 +1,5 @@
-<% if (isWindows) { %>
-/// <reference path="../node_modules/@types/mocha/index.d.ts" />
-<% } %>
-import index = require("../src/index");
 import * as chai from "chai";
+import * as index from "../src/index";
 
 const expect = chai.expect;
 

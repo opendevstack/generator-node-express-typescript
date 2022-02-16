@@ -1,5 +1,5 @@
 export class Greeter {
-  private greeting: string;
+  private readonly greeting: string;
 
   constructor(message: string) {
     this.greeting = message;
